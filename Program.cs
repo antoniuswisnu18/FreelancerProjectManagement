@@ -1,3 +1,7 @@
+using FreelancerProjectManagementAPI.BusinessLogicLayer.Repositories;
+using FreelancerProjectManagementAPI.BusinessLogicLayer.Repositories.Interfaces;
+using FreelancerProjectManagementAPI.BusinessLogicLayer.Services;
+using FreelancerProjectManagementAPI.BusinessLogicLayer.Services.Interfaces;
 using FreelancerProjectManagementAPI.DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +19,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+builder.Services.AddScoped<IFreelancerRoleMasterRepo, FreelancerRoleMasterRepo>();
+builder.Services.AddScoped<IFreelancerRoleMasterService, FreelancerRoleMasterService>();
 
 
 var app = builder.Build();
