@@ -2,8 +2,8 @@
 
 namespace FreelancerProjectManagementAPI.BusinessLogicLayer.Repositories.Interfaces
 {
-    public interface IFreelancerRoleMasterRepo : IRepository<FreelancerRoleMaster>
+    public interface IProgressStatusMasterRepo : IRepository<ProgressStatusMaster>
     {
-
+ 
     }
 }

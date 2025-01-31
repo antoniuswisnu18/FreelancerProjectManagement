@@ -16,12 +16,12 @@ namespace FreelancerProjectManagementAPI.BusinessLogicLayer.Services
 
         public async Task<IEnumerable<FreelancerRoleMaster>> GetAllRoleAsync()
         {
-            return await _repo.GetAllAsync();
+            return await _repo.GetAll();
         }
 
         public async Task<FreelancerRoleMaster> GetRoleById(int id)
         {
-            return await _repo.GetByIdAsync(id);
+            return await _repo.GetById(id);
         }
     }
 }

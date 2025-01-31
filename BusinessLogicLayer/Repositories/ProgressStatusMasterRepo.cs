@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FreelancerProjectManagementAPI.BusinessLogicLayer.Repositories
 {
-    public class FreelancerRoleMasterRepo : GenericRepository<FreelancerRoleMaster>, IFreelancerRoleMasterRepo
+    public class ProgressStatusMasterRepo : GenericRepository<ProgressStatusMaster>, IProgressStatusMasterRepo
     {
-        private readonly ILogger<FreelancerRoleMasterRepo> _logger;
-        public FreelancerRoleMasterRepo(ApplicationDbContext context, ILogger<FreelancerRoleMasterRepo> logger) : base(context,logger)
+        private readonly ILogger<ProgressStatusMasterRepo> _logger;
+        public ProgressStatusMasterRepo(ApplicationDbContext context, ILogger<ProgressStatusMasterRepo> logger) : base(context, logger)
         {
             _logger = logger;
         }
