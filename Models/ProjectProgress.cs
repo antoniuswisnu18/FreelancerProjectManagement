@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FreelancerProjectManagementAPI.Models;
 
 public partial class ProjectProgress
 {
+    [Key]
     public int ProgressId { get; set; }
+    [ForeignKey("Project")]
 
     public int ProjectId { get; set; }
 

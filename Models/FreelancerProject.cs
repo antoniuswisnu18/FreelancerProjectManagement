@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FreelancerProjectManagementAPI.Models;
 
 public partial class FreelancerProject
 {
+    [Key]
     public int AssignmentId { get; set; }
 
+    [ForeignKey("Freelancer")]
+
     public int FreelancerId { get; set; }
+    [ForeignKey("Project")]
 
     public int ProjectId { get; set; }
 

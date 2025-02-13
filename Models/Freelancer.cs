@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace FreelancerProjectManagementAPI.Models;
 
 public partial class Freelancer
 {
+    [Key]
     public int FreelanceId { get; set; }
 
     public string Name { get; set; } = null!;

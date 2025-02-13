@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace FreelancerProjectManagementAPI.Models;
 
 public partial class ProgressStatusMaster
 {
+    [Key]
     public int ProgressStatusId { get; set; }
 
     public string ProgressStatusName { get; set; } = null!;

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace FreelancerProjectManagementAPI.Models;
 
 public partial class PaymentStatusMaster
 {
+    [Key]
     public int PaymentStatusId { get; set; }
 
     public string PaymentStatusName { get; set; } = null!;

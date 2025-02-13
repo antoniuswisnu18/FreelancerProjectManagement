@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FreelancerProjectManagementAPI.Models;
 
 public partial class AuditTrail
 {
+    [Key]
     public int AuditId { get; set; }
+
+    [ForeignKey("User")]
 
     public int UserId { get; set; }
 
